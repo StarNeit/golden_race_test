@@ -1,0 +1,15 @@
+<div *ngIf="$state | async as state" class="ball-selector">
+  <div class="balls">
+    <div
+      *ngFor="let ball of ballGroup"
+      class="ball-place"
+    >
+      <app-ball [active]="state.selected" [ball]="ball"></app-ball>
+    </div>
+  </div>
+  <div *ngIf="state.selected.length" class="d-flex pt-5 justify-content-center">
+    <button (click)="onClearSelection()" class="btn btn-outline-primary">
+      Clear selection
+    </button>
+  </div>
+</div>

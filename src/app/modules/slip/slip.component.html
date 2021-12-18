@@ -1,0 +1,25 @@
+<div *ngIf="$state | async as state" class="bet-slip">
+  <div class="selected-ball">
+    <ng-container *ngFor="let ball of state.selected">
+      <div class="ball-wrapper">
+        <app-ball [selected]="true" [active]="[ball]" [ball]="ball"></app-ball>
+      </div>
+    </ng-container>
+    <div *ngFor="let item of sites" class="ball-wrapper"></div>
+  </div>
+  <div class="input-group mb-3 mt-5">
+    <div class="input-group-prepend">
+      <span class="input-group-text rounded-0 rounded-start">{{state.selected.length}}⨯</span>
+    </div>
+    <input [(ngModel)]="bet" type="number" min="5" class="form-control" placeholder="Bet amount..." />
+    <div class="input-group-append">
+      <button (click)="onClickOk()" class="btn btn-primary rounded-0 rounded-end">OK</button>
+    </div>
+  </div>
+  <div class="flex-grow-1 pt-5 d-flex justify-content-center">
+    <h1>Total: {{totalBet}} €</h1>
+  </div>
+  <button (click)="onPlaceBet()" [disabled]="!state.isAccepted" class="btn btn-primary">
+    Place Bet
+  </button>
+</div>

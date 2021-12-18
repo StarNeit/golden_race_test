@@ -1,0 +1,25 @@
+.bet-slip {
+  min-width: 400px;
+  background-color: rgba(245, 245, 245, 0.16);
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: inset 3px 3px 3px rgba(232, 232, 232, 0.56), inset -3px -3px 3px #f3f3f390;
+  margin-left: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .selected-ball {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ball-wrapper {
+      width: 32px;
+      height: 32px;
+      background-color: #eee;
+      border-radius: 50%;
+      margin: 4px;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div *ngIf="$state | async as state" class="toast-wrapper flex-grow-1 d-flex justify-content-center align-items-center flex-column">
+  <h1 class="text-center">Result</h1>
+  <div class="my-3 ball-wrapper">
+    <app-ball [ball]="resultBall"></app-ball>
+  </div>
+  <h1 *ngIf="isWin" class="text-center text-success">
+    You Won!
+    {{state.earned}} €
+  </h1>
+  <h1 *ngIf="!isWin" class="text-center text-danger">You Failed!</h1>
+  <button (click)="onReplay()" class="btn btn-danger mt-5">
+    Replay
+  </button>
+</div>

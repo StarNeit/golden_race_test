@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth; 
+    height: -webkit-fill-available;     
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+}
+
+body {
+    background: $white; 
+    height: -webkit-fill-available; 
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-wrap {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content-container {
+    border-radius: 20px;
+    background-color: white;
+    padding: 6px;
+    height: calc(100vh - 40px);
+    display: flex;
+}
+
+.MuiDataGrid-root {
+    border: 0px!important;
+}
+
+.card-header h6 {
+    font-weight: 600;
+    color: $dark;
+}

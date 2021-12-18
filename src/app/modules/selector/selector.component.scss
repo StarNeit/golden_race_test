@@ -1,0 +1,22 @@
+.ball-selector {
+  background-color: rgba(245, 245, 245, 0.16);
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: inset 3px 3px 3px rgba(232, 232, 232, 0.56), inset -3px -3px 3px #f3f3f390;
+  padding: 100px 20px 20px;
+
+  .balls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .ball-place {
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: #eee;
+      margin: 4px;
+    }
+  }
+}

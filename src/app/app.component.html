@@ -1,0 +1,7 @@
+<div *ngIf="$state | async as state" class="main-wrap">
+    <div class="content-container">
+        <ball-selector *ngIf="!state.result" class="flex-grow-1"></ball-selector>
+        <app-toast *ngIf="state.result" class="flex-grow-1"></app-toast>
+        <bet-slip class="h-100"></bet-slip>
+    </div>
+</div>
